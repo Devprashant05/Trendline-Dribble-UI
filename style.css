@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins'
+    font-family: 'Poppins';
 }
 
 html,
@@ -20,7 +20,6 @@ body {
 #nav {
     height: 60px;
     width: 100%;
-    /* background-color: aquamarine; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,7 +47,11 @@ body {
 
 .nav-2 h4 {
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 600;
+}
+
+.nav-2 h5 {
+    display: none;
 }
 
 .nav-2 span {
@@ -59,7 +62,6 @@ body {
 #nav2 {
     height: 60px;
     width: 100%;
-    /* background-color: aqua; */
     display: flex;
     align-items: center;
     gap: 60px;
@@ -69,19 +71,17 @@ body {
 #nav2 h3 {
     text-transform: uppercase;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 #content {
     height: calc(100% - 120px);
     width: 100%;
-    /* background-color: aqua; */
 }
 
 .text-content {
     height: 45%;
     width: 100%;
-    /* background-color: blanchedalmond; */
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -100,17 +100,13 @@ body {
     flex-shrink: 0;
     height: 100%;
     width: 80%;
-    /* background-color: aquamarine; */
-    /* border: 1px solid; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: ; */
 }
 
 .short-text {
     width: 30%;
-    /* background-color: beige; */
     display: flex;
     align-items: center;
     gap: 80px;
@@ -121,14 +117,15 @@ body {
 }
 
 .short-text h4 {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 100;
     color: rgb(106, 103, 103);
 }
 
 .elem h1 {
     padding: 0 110px;
-    font-size: 100px;
+    /* font-size: 100px; */
+    font-size: 7vw;
     font-weight: 500;
 }
 
@@ -149,4 +146,94 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+
+@media (max-width: 600px) {
+    #nav {
+        height: 60px;
+        padding: 0 30px;
+    }
+    
+    .nav-1 {
+        gap: 2px;
+    }
+    
+    .nav-1 .circle {
+        height: 18px;
+        width: 18px;
+    }
+
+    .nav-2 {
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .nav-2 h4 {
+        display: none;
+    }
+
+    .nav-2 h4:nth-child(1) {
+        display: initial;
+        margin-right: 10px;
+    }
+
+    .nav-2 h5 {
+        display: block;
+        font-size: 18px;
+    }
+    
+    .nav-2 span {
+        color: rgb(126, 124, 124);
+        margin-left: 15px;
+    }
+
+    #nav2 {
+        height: 60px;
+        background-color: aqua;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0 18px;
+    }
+    
+    #nav2 h3 {
+        text-transform: uppercase;
+        font-size: 2.5vw;
+        font-weight: 600;
+        color: rgb(65, 63, 63);;
+    }
+
+    #content {
+        height: calc(100% - 120px);
+    }
+    
+    .text-content {
+        height: 35%;
+        width: 100%;
+    }
+    
+    .text-content::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .elem {
+        width: fit-content;
+        margin-right: 14%;
+    }
+    
+    .short-text {
+        display: none;
+    }
+    
+    .elem h1 {
+        padding: 0;
+        font-size: 14vw;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    
+    .img-content {
+        height: 65%;
+    }
+    
 }
